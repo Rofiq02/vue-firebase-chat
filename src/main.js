@@ -1,8 +1,16 @@
+import '@babel/polyfill'
+import 'mutationobserver-shim'
 import Vue from 'vue'
+import VueChatScroll from 'vue-chat-scroll'
+import './plugins/bootstrap-vue'
 import App from './App.vue'
+import router from './router'
+
 
 Vue.config.productionTip = false
+Vue.use(VueChatScroll)
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
